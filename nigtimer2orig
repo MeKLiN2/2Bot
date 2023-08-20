@@ -1,0 +1,20 @@
+    def nigtimer(self, msg):
+        should_be_banned = False
+        chat_words = msg.split(' ')
+        for bad in pinylib.CONFIG.B_NIGWORDS:
+            if bad.startswith('*'):
+                _ = bad.replace('*', '')
+                if _ in msg:
+                    should_be_banned = True
+            elif bad in chat_words:
+                should_be_banned = True
+        self.send_chat_msg('Are you a nigger, %s?' % self.active_user.nick)
+        self.active_user.last_msg = msg
+        time.sleep(1 * 60)
+        if _ in msg:
+            should_be_banned = True
+        if should_be_banned:
+            self.send_chat_msg('Anti-Nigger Defense System Activated.')
+            self.send_kick_msg(self.active_user.id)
+        else:
+            self.send_chat_msg('Anti-Nigger Defense System Deactivated.')
