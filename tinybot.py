@@ -218,18 +218,16 @@ class TinychatBot(pinylib.TinychatRTCClient):
             self.send_chat_msg("cheers, %s (maori)" % self.active_user.nick)
 
         if "tokes" in msg:
-                #threading.Thread(target=self.toketimer).start()
-        #if 
-        #webbrowser.open('http://google.co.kr', new=2)
+            threading.Thread(target=self.toketimer).start()
 
         if "cheers" in msg:
-            #self.send_chat_msg("cheers, %s" % self.active_user.nick)
+            self.send_chat_msg("cheers, %s" % self.active_user.nick)
 
         if "meklinsleep" in msg:
-                   # threading.Thread(target=self.meksleeptimer).start()
+            threading.Thread(target=self.meksleeptimer).start()
 
         if "dab" in msg:
-            #self.send_chat_msg("inhaling anything at high heat forms scar tissue on your lungs, %s" % self.active_user.nick)
+            self.send_chat_msg("inhaling anything at high heat forms scar tissue on your lungs, %s" % self.active_user.nick)
 
         if "windows" in msg:
             self.send_chat_msg("%s! https://archive.org/details/7700divine the fastest version of windows ever made for high ranked, serious players, or tournament computers. this is the only windows .iso with zero dpc latency on the cpu. lovingly hand-edited by MeKLiN on 06-27-2022" % self.active_user.nick)
@@ -243,11 +241,11 @@ class TinychatBot(pinylib.TinychatRTCClient):
 
 
         if "orc" in msg:
-           # msg = unicode("𝗜 𝗔𝗠 𝗔𝗡 𝙊𝙍𝘾 𝗔𝗡𝗗 𝗜'𝗠 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘\n"
-                         # "𝗗𝗜𝗚𝗚𝗬, 𝗗𝗜𝗚𝗚𝗬 𝗛𝗢𝗟𝗘, 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘", 'utf-8')
+            msg = unicode("𝗜 𝗔𝗠 𝗔𝗡 𝙊𝙍𝘾 𝗔𝗡𝗗 𝗜'𝗠 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘\n"
+                          "𝗗𝗜𝗚𝗚𝗬, 𝗗𝗜𝗚𝗚𝗬 𝗛𝗢𝗟𝗘, 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘", 'utf-8')
 
         if "orc" in msg:
-            #self.send_chat_msg("𝗜 𝗔𝗠 𝗔𝗡 𝙊𝙍𝘾 𝗔𝗡𝗗 𝗜'𝗠 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘\n𝗗𝗜𝗚𝗚𝗬, 𝗗𝗜𝗚𝗚𝗬 𝗛𝗢𝗟𝗘, 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘", 'utf-8')
+            self.send_chat_msg("𝗜 𝗔𝗠 𝗔𝗡 𝙊𝙍𝘾 𝗔𝗡𝗗 𝗜'𝗠 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘\n𝗗𝗜𝗚𝗚𝗬, 𝗗𝗜𝗚𝗚𝗬 𝗛𝗢𝗟𝗘, 𝗗𝗜𝗚𝗚𝗜𝗡𝗚 𝗔 𝗛𝗢𝗟𝗘", 'utf-8')
 
         if "skrypt" in msg:
             sleep(randint(1,3))
@@ -257,20 +255,20 @@ class TinychatBot(pinylib.TinychatRTCClient):
             sleep(randint(5,7))
 
         if "ZEBBY" in msg:
-            #self.send_chat_msg('!acc ban %s' % self.active_user.account)
-            #sleep(randint(3,5))
+            self.send_chat_msg('!acc ban %s' % self.active_user.account)
+            sleep(randint(3,5))
 
         if "Z123" in msg:
-            #self.send_chat_msg('!allowcam7')
-            #sleep(randint(29,31))
-            #self.send_chat_msg('!allowcam7')
+            self.send_chat_msg('!allowcam7')
+            sleep(randint(29,31))
+            self.send_chat_msg('!allowcam7')
 
         if "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" in msg:
             self.send_chat_msg('!acc ban %s' % self.active_user.account)
             sleep(randint(3,5))
 
         if len(msg) > 250:
-            #self.send_chat_msg("You have earned ONE spam point! (%s) Type 'ZEBBY' to spend them." % len(msg))
+            self.send_chat_msg("You have earned ONE spam point! (%s) Type 'ZEBBY' to spend them." % len(msg))
 
         if msg.startswith(prefix):
             
@@ -678,8 +676,8 @@ class TinychatBot(pinylib.TinychatRTCClient):
                     self.do_Geek()
 
                 elif cmd == prefix + "tokes777":
-                    #threading.Thread(target=self.toketimer).start()
-                    #self.do_whistle()
+                    threading.Thread(target=self.toketimer).start()
+                    self.do_whistle()
 
                 elif cmd == prefix + "tokes":
                     threading.Thread(target=self.toketimer).start()
