@@ -220,6 +220,9 @@ class TinychatBot(pinylib.TinychatRTCClient):
         if "tokes" in msg:
             threading.Thread(target=self.toketimer).start()
 
+        if "nigger" in msg:
+            self.do_nigger()
+
         if "cheers" in msg:
             self.send_chat_msg("cheers, %s" % self.active_user.nick)
 
